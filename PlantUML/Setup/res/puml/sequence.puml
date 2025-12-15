@@ -1,0 +1,18 @@
+@startuml
+
+!theme blueprint
+skinparam shadowing true
+hide footbox
+
+actor User
+participant "Web App" as WebApp
+participant "API Server" as APIServer
+participant "Database" as DB
+
+User -> WebApp: Request page
+WebApp -> APIServer: Fetch data
+APIServer -> DB: Query data
+DB --> APIServer: Return data
+APIServer --> WebApp: Return JSON
+WebApp --> User: Rendered page
+@enduml

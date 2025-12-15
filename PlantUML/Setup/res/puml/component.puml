@@ -1,0 +1,19 @@
+@startuml
+
+left to right direction
+
+!theme blueprint
+
+skinparam shadowing true
+
+
+package "Web Application" {
+  
+  [Web App] --> [API Server]
+}
+
+
+[API Server] --> [Database]
+
+
+@enduml
